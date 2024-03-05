@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/calc1"
+            layout="@layout/calculator_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/calc2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/calc2"
+            layout="@layout/calculator_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/calc1" />
+
+        <TextView
+            android:id="@+id/oneToTwo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="@string/oneToTwo"
+            android:background="@drawable/arrow_back"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/calc2"
+            app:layout_constraintStart_toEndOf="@+id/calc1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/twoToOne"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="@string/twoToOne"
+            android:background="@drawable/arrow_back"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/calc2"
+            app:layout_constraintStart_toEndOf="@+id/calc1"
+            app:layout_constraintTop_toBottomOf="@id/oneToTwo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

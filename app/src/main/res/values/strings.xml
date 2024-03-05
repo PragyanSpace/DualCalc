@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dual Calc</string>
+    <string name="twoToOne"><![CDATA[<-]]></string>
+    <string name="oneToTwo"><![CDATA[->]]></string>
+</resources>
